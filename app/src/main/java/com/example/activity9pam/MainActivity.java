@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnTambah;
+    Button btnTambah, bLihat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        bLihat = findViewById(R.id.Btnlihat);
+
+        bLihat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent (LihatBarang.getActIntent(MainActivity.this));
+            startActivity(i);}
+        });
+
     }
 }
